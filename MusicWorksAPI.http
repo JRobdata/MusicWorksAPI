@@ -1,0 +1,40 @@
+@host = http://localhost:5241
+
+GET {{host}}/works
+
+###
+GET {{host}}/works/1
+
+###
+POST {{host}}/works
+Content-Type: application/json
+
+{
+ 
+    "title": "Test piece",
+    "Categoryid": 1,
+    "instrumentation": "Piano",
+    "price": 5.99,
+    "publicationYear": 2013
+}
+
+###
+PUT {{host}}/works/1
+Content-Type: application/json
+
+{
+
+    "title": "2 Little Inventions",
+    "Categoryid": 1,
+    "Instrumentation": "Piano",
+    "Price": 5.99,
+    "PublicationYear": 2013
+}
+
+###
+DELETE {{host}}/works/8
+
+###
+GET {{host}}/categories
+
+###
